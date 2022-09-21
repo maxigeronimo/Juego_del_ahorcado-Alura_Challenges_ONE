@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- encabezado -->
+    <header>
+      <div class="caja">
+        <h1><img src="imagenes/LogoOracleOne.png"></h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.facebook.com/maxi.geronimo1" target="_blank"><img src="imagenes/20673.png" alt="logo facebook" class="facebook"></a></li>
+                <li><a href="https://www.linkedin.com/in/maxi-ger%C3%B3nimo-colque-48385416a/" target="_blank"><img src="imagenes/linkedin.png" alt="logo linkedin" class="linkedin"></a></li>
+                <li><a href="https://github.com/maxigeronimo" target="_blank"><img src="imagenes/github.png" alt="logo github" class="github"></a></li>
+                <li><a href="https://www.instagram.com/mx_geronimo00/" target="_blank"><img src="imagenes/instragram.png" alt="logo instagram" class="instagram"></a></li>
+            </ul> 
+        </nav>
+    </div>       
+    </header>
+    <!-- cuerpo -->
+    <main class="Ahorcado">
+        <selection class="logo">
+          <!-- personalizacion de titulo -->
+          <img class="logoImg" src="imagenes/logo.svg" alt="logo de alura">
+          <h1 class="title" data-text="Juego del Ahorcado">Juego del Ahorcado</h1>
+        </selection>
+        <!-- botones principales -->
+        <selection class="botones-home" id="div-desaparece">
+            <button class="btn-iniciar" type="buttom" id="iniciar-juego" onclick="iniciarJuego()" >Iniciar juego</button>
+            <button class="btn-agregar-palabra" type="buttom" id="agregar-palabra" onclick="agregarPalabra()">Agregar nueva palabra</button>
+        </selection>
+        <!-- pantalla de agregado -->
+        <selection id="div-aparece-agregar" class="aparece-agregar">
+            <textarea placeholder="Ingrese el texto aquí..." class="campo-texto" id="texto-recibido"></textarea>
+    
+            <div class="mensaje-advertencia">
+                <img src="imagenes/!.png" alt="simbolo de advertencia" class="simbolo">
+                <p class="mensaje-letras">Solo letras y sin acentos</p>
+            </div>
+            
+            <div class="botones-para-agregar-palabra">
+               <button class="guardar-empezar" type="submit" id="guardar-empezar" onclick="guardarEmpezar()">Guardar y Jugar</button>
+               <button class="cancelar" type="submit" id="cancelar" onclick="cancelar()">Cancelar</button>
+            </div>
+           
+    
+        </selection>
+        <!-- dibujar palabras y muñeco -->
+        <selection class="canvas" id="div-aparece-ahorcado">
+           <!--panel de dibujo  -->
+            <div class="subrayado">
+              <canvas id="horca" width="600" height="600"></canvas>
+            </div>
+            <!-- botones del canva -->
+            <div class="botones-div-canvas">
+                <button class="btn-nuevo-juego" type="submit" id="nuevo-juego" onclick="nuevoJuego()">Nuevo juego</button>
+                <button class="btn-desistir" type="submit" value="" id="desistir" onclick="desistir()">Desistir</button>
+            </div>
+        </selection>
+    </main>
+    <!-- nota al pie -->
+    <footer>
+        <img src="imagenes/logoIniciales.png" class="imagenPie">
+        <p class="copyright">&copy; by Geronimo Colque, Maximiliano</p>
+    </footer>
+    <script src="javascrip/horca.js"></script>
+    <script src="javascrip/canvas.js"></script>
+</body>
+</html>
